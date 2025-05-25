@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Face Segregator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- face-api.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.7.12/dist/face-api.js"></script>
+    <!-- JSZip -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Photo Face Segregator</h1>
+        
+        <div id="drop-zone" class="drop-zone">
+            <div class="drop-zone-content">
+                <p>Drag and drop a folder containing images here</p>
+                <p class="small">or</p>
+                <button id="folder-select-btn">Select Folder</button>
+                <input type="file" id="folder-input" webkitdirectory directory multiple style="display: none;">
+            </div>
+        </div>
+
+        <div id="progress-container" class="progress-container" style="display: none;">
+            <div class="progress-status">
+                <p id="status-text">Processing...</p>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="download-container" class="download-container" style="display: none;">
+            <a id="download-link" class="download-button">Download Processed Images</a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
